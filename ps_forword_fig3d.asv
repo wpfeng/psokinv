@@ -1,0 +1,28 @@
+%
+%
+% ps_forword_fig3d
+%
+if isempty(fig3dID)||ishandle(fig3dID)==0
+    fig3dID = figure('Name','Fig3D');
+    if isempty(fig3dID)~=1
+        ginfo.fig3dposition = get(fig3dID,'Position');
+        cid = get(fig3dID,'CurrentAxes');
+        if isempty(cid)~=1
+            [ginfo.az,ginfo.el] = view(cid);
+        end
+    end
+else
+    ginfo.fig3dposition = get(fig3dID,'Position');
+    cid = get(fig3dID,'CurrentAxes');
+    if isempty(cid)~=1
+        [ginfo.az,ginfo.el] = view(cid);
+    end
+    delete(fig3dID);
+    fig3dID = figure('Name','Fig3D');
+    set(fig3dID,G
+end
+if sum(Cfpara(:)) ~=0
+    figure(fig3dID);
+    sim_fig3d(Cfpara);
+    view([ginfo.az,ginfo.el]);
+end

@@ -1,0 +1,44 @@
+Description
+by Wanpeng Feng
+   wanpeng.feng@hotmail.com
+   
+ 
+After over ten years' development, PSOKINV has widely been used in geophysics community globally. (I am glad to see some of my works in the past are 
+   useful.) PSOKINV is a geodetic data based inversion package to help arrange geophysical inversion with multipel geodetic data, e.g. GPS/InSAR/GRAVITY.
+   With my increasing knowledge of computer sciences, the structure of PSOINV is NOT optimal at all in designing. Too many global parameters are used 
+   in the current version and some of them have been obsolete. A manual for the use of the package has been required by many times. Unfortunately, no complete
+   manual is done yet. There is another reason why I start working on README. The current version is full of bugs/weaknesses. We need to track the updates
+   and modification history clearly as well. Basically, this works mainly for my self or any other developer starting from psokinv. I am afraid that this document
+   cannot be treated as a manual. You won't find any instruction on MPSO, and any other functions used in the package. Anyway, let us do it now...
+   
+2018-08-01
+   1. unit of displacements is added today.
+      - This keyword matters when moment magnitude (mw) is allowed to estimate the size of the earthquake. 
+	  - The new option is available now. We can define the unit of the data with 
+	     - # unit of displacements: m,cm or mm
+		 - m for meter in default
+		 - sim_invconfig.m and sim_readconfig.m have both been modified towards a better solution in non-linear inversion.
+		 
+2018-08-05
+   
+   1. A bug for downsampling azimuth offset data. 
+      - The last version of ps_dsm cannot return correct projection vections for azimuth offset data. Now few functions were fixed including
+	     - sim_rquads.m 
+		 - sim_quad2okinv.m
+   2. add one option for the non-linear global searching. 
+      - mwall, another global parameter again. (no better way to arrange this...)
+	  - in default, mwall is 1, which means that the constraints of boundary moment magnitudes will only work for the total seismic moment. In another words,
+	    for example, several faults could be involed in the modelling, but the settings of mw boudaries will be only checked for the total seismic moment. In this case,
+		the boundary mw should be identical too for any individual fault. 
+	  - relevent functions include
+	     - sim_FUNCinvnfault.m
+		 - sim_invconfig.m
+		 - sim_readconfig.m
+		 - sim_obj_conrake.m 
+   3. fix several bugs/urgly settings in ps_dsm package.
+      - azi and azimuth now have been both supported in ps_dsm. Previously, azimuth will cause some problems in the application.
+	  - range and rng are similar as the above.
+	  - improve the output format to avoid some potential editing issues. Improvements were made in the current version including 
+	     - sim_rquads.m
+		 - sim_rbfunc.m 
+		 

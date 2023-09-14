@@ -1,0 +1,104 @@
+---------------------------------------------------------------------------
+General information: PS-OKINV parameter file
+---------------------------------------------------------------------------
+# elastic constant: lambda
+  3.23e+010
+# elastic constant: mu
+  3.23e+010
+# number of particles
+  200
+# PSO: maximum restart number
+  3
+# PSO: total iteration number (default: 25)
+  25
+# SIMPLEX: maximum iteration number (default: 1000)
+  5000
+# SIMPLEX: Info to be shown (1: Yes; 0: No)
+  0
+# Monte Carlo Estimation: 1: Yes; 0: No
+  1
+# Monte Carlo: Loop numbers, e.g. from to
+  1 100
+# Monte Carlo: Directory of InputFiles
+  pert
+# Monte Carlo: Directory of OutputFiles
+  result
+# output file name: oksar format 
+  okasar_mc.inp
+# output file name: matlab format
+  matfile_mc.mat
+---------------------------------------------------------------------------
+Number of inputfiles:   21
+---------------------------------------------------------------------------
+#No Inv(0/1)  A&&B   C    Weight  VCM  MC(0/1)  PathFileName
+1      0       1     1      5     NULL   0      GPS_HVector.okinv.inp
+ 2     0       2     2      1     NULL   0      GPS_VVector.okinv.inp
+ 3     1       3     3      1     NULL   1      T470A_PHS.okinv.inp
+ 4     1       4     4      1     NULL   1      T476A_PHS.okinv.inp
+ 5     1       5     5      1     NULL   1      T471A-lg_PHS.okinv.inp
+ 6     1       6     6      1     NULL   1      T476D_WS_NEW.okinv.inp
+ 7     1       7     7      1     NULL   1      T018D_PHS.okinv.inp
+ 8     1       8     8      1     NULL   1      T472A_PHS.okinv.inp
+ 9     1      10    10      1     NULL   1      T061D_PHS.okinv.inp
+10     1      11    11      1     NULL   1      T473A-lg_PHS.okinv.inp
+11     1      12    12      1     NULL   1      T477A_PHS.okinv.inp
+12     1      13    13      1     NULL   1      T290D_PHS.okinv.inp
+13     1      14    14      1     NULL   1      T474A_PHS.okinv.inp
+14     1      15    15      1     NULL   1      T333D_PHS.okinv.inp
+15     1      16    16      1     NULL   1      T475A_PHS.okinv.inp
+16     1      16    16     0.05   NULL   0      T471A_RNG_Off.okinv
+17     1      16    16     0.05   NULL   0      T472A_RNG_Off.okinv
+18     1      16    16     0.05   NULL   0      T473A_RNG_Off.okinv
+19     1      16    16     0.05   NULL   0      T474A_RNG_Off.okinv
+20     1      16    16     0.05   NULL   0      T475A_RNG_Off.okinv
+21     1      16    16     0.05   NULL   0      T476A_RNG_Off.okinv
+---------------------------------------------------------------------------
+Number of faults:  4
+---------------------------------------------------------------------------
+#     Value      MinV        MaxV    Inv(0/1)  Symbol Parameters of fault 1
+---------------------------------------------------------------------------
+COORTYPE:  1 
+---------------------------------------------------------------------------
+     426.061    423.5269    429.5269     0      f(1,1)     x-start(km)
+    3504.23    3501.7516   3505.7516     0      f(1,2)     y-start(km)
+     223.8        0.00      359.90       0      f(1,3)  strike(degree)
+      52.00      20.00       85.00       1      f(1,4)     dip(degree)
+       0.00       0.00       10.00       0      f(1,5)       depth(km)
+       9.00       0.00       40.00       1      f(1,6)       width(km)
+     138.00      40.00      160.00       1      f(1,7)      length(km)
+---------------------------------------------------------------------------
+#     Value      MinV        MaxV    Inv(0/1)  Symbol Parameters of fault 2
+---------------------------------------------------------------------------
+COORTYPE:  0 
+---------------------------------------------------------------------------
+     400.9787  393.5566    397.5566      0      f(2,1)     x-start(km)
+    3464.993  3431.7764   3435.7764      0      f(2,2)     y-start(km)
+     223.8       0.00      359.9000      0      f(2,3)  strike(degree)
+      26.00      6.00       46.00        1      f(2,4)    dip(degree)
+    0.00         0.00       10.00        0      f(2,5)       depth(km)
+    24.00        0.00       40.00        1      f(2,6)       width(km)
+   140.00       40.00      160.00        1      f(2,7)      length(km)
+---------------------------------------------------------------------------
+#     Value      MinV        MaxV    Inv(0/1)  Symbol Parameters of fault 3
+---------------------------------------------------------------------------
+COORTYPE:  0 
+---------------------------------------------------------------------------
+    458.324     456.7766       459.7766        0      f(3,1)     x-start(km)
+   3534.429    3532.0127      3536.0127        0      f(3,2)     y-start(km)
+    220.3       220.3          220.3           0      f(3,3)  strike(degree)
+     74.02       45.00          89.00          1      f(3,4)     dip(degree)
+      0.00        0.00          20.00          0      f(3,5)       depth(km)
+     10.00        4.00          50.00          1      f(3,6)       width(km)
+     87.80       60.00         140.00          0      f(3,7)      length(km)
+---------------------------------------------------------------------------
+#     Value      MinV        MaxV    Inv(0/1)  Symbol Parameters of fault 2
+---------------------------------------------------------------------------
+COORTYPE:  2 
+---------------------------------------------------------------------------
+    487.725    511.150618    511.150618        0      f(4,1)     x-start(km)
+   3568.219   3593.0428407  3593.0428407       0      f(4,2)     y-start(km)
+    228.0         0.00        359.90           0      f(4,3)  strike(degree)
+     72.00       40.00         89.90           1      f(4,4)     dip(degree)
+      0.00        0.00         20.00           0      f(4,5)       depth(km)
+     20.00        0.00         50.00           1      f(4,6)       width(km)
+     68.00        20.00       150.00           1      f(4,7)      length(km)

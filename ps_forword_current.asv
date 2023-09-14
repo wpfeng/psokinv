@@ -1,0 +1,4 @@
+%
+% ps_forword_current
+%
+set(ginfo.currentparaid,'String',num2str(Cfpara(ginfo.faultno,ginfo.para.no)));

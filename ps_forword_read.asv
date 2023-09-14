@@ -1,0 +1,15 @@
+%
+% ps_forword_read
+% read psoksar
+%ginfo.currentformat
+switch ginfo.currentformat
+    case 'PSOKSAR'
+        Gfpara = sim_psoksar2SIM(ginfo.psoksar);
+    case 'FPARA'
+        Gfpara = load(ginfo.psoksar);
+    case 'OKSAR'
+        Gfpara = sim_oksar2SIM(ginfo.psoksar);
+end
+ginfo.faultnum = size(Gfpara,1);
+set(ginfo.faultnoid,'String',num2cell(linspace(1,ginfo.faultnum,ginfo.faultn)'));
+set(ginfo.currentparaid,'String',num2str(Gfpara(ginfo.faultno,ginfo.para.no)));
